@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="通过多 Agent 实时交易与储能 SOC 边际价值报价，让家庭能源在当前与未来之间自主协调。">
+<title>家庭能源智能调度 · 方案与概念演示</title>
+<style>
+:root{color-scheme:light;--ink:#1d1d1f;--muted:#6e6e73;--blue:#0071e3;--surface:#f5f5f7;--line:#e7e7eb;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);background:#fff}*{box-sizing:border-box}body{margin:0}a{color:inherit;text-decoration:none}a:focus-visible{outline:3px solid var(--blue);outline-offset:5px}html{scroll-behavior:smooth}.wrap{width:min(1160px,calc(100% - 64px));margin:auto}.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:23px 0;border-bottom:1px solid var(--line);font-size:14px}.brand{font-weight:600}.nav-links{display:flex;gap:25px;color:var(--muted)}.nav-links a:hover{color:var(--blue)}.hero{padding:75px 0 62px;text-align:center}.eyebrow{font-size:12px;letter-spacing:2px;color:var(--muted);margin:0 0 17px}.hero h1{font-size:clamp(34px,5vw,56px);font-weight:600;letter-spacing:-2px;line-height:1.25;margin:0 0 23px}.hero h1 span{color:var(--blue)}.hero p{font-size:18px;line-height:1.9;color:var(--muted);margin:0}.hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:29px}.button{display:inline-flex;align-items:center;justify-content:center;gap:20px;padding:12px 19px;min-height:46px;border-radius:13px;font-size:14px;font-weight:500;background:var(--blue);color:#fff;transition:background .2s,transform .2s}.button:hover{background:#0077ed;transform:translateY(-1px)}.button.secondary{color:var(--ink);background:var(--surface);border:1px solid var(--line)}.button.secondary:hover{background:#eaeaec}.section{padding:58px 0 64px;border-top:1px solid var(--line);scroll-margin-top:24px}.section-heading{display:flex;gap:22px;align-items:baseline;margin-bottom:31px}.number{color:var(--blue);font-size:14px;font-weight:500;font-variant-numeric:tabular-nums}.section h2{font-size:28px;letter-spacing:-.6px;font-weight:600;margin:0;line-height:1.5}.section-heading p{font-size:17px;color:var(--muted);margin:8px 0 0;line-height:1.7}.section-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:48px;align-items:start}.copy p{font-size:16px;line-height:2;color:#626269;margin:0 0 20px}.copy strong{font-weight:500;color:var(--ink)}.copy .button{margin-top:5px}.visual{border-radius:24px;background:var(--surface);padding:27px 24px;margin:0;overflow:hidden}.visual svg{display:block;width:100%;height:auto;font-family:inherit}.visual figcaption{border-top:1px solid #e0e3e8;margin-top:17px;padding-top:17px;font-size:14px;color:var(--muted);line-height:1.8}.visual-label{font-size:12px;color:var(--muted);letter-spacing:1px;margin-bottom:18px}.scale-labels{display:flex;justify-content:space-between;gap:12px;font-size:14px;color:#626269;margin-top:15px}.scale-labels span:last-child{text-align:right}.tag{font-size:12px;padding:5px 10px;border-radius:7px;background:#e8f1fb;color:#427bab;display:inline-block;margin-bottom:15px}.closing{padding:47px 44px;border-radius:25px;background:var(--surface);margin-bottom:35px}.closing h2{font-size:26px;font-weight:600;letter-spacing:-.6px;margin:0 0 25px}.two-times{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-bottom:24px}.two-times span{font-size:13px;color:var(--muted)}.two-times h3{font-size:21px;font-weight:500;line-height:1.6;margin:9px 0 0}.closing p{font-size:16px;line-height:2;color:#626269;margin:0}.cycle{list-style:none;display:flex;flex-wrap:wrap;align-items:center;gap:10px 0;margin:27px 0;padding:0}.cycle li{font-size:14px;display:flex;align-items:center}.cycle li:not(:last-child)::after{content:'→';margin:0 11px;color:#90909a}.cycle span{background:#fff;padding:10px 12px;border-radius:10px;border:1px solid var(--line)}.cycle li:last-child span{color:var(--blue);border-color:#cddff3}.footer{display:flex;justify-content:space-between;gap:20px;padding:21px 0 31px;font-size:12px;color:#86868b;border-top:1px solid var(--line)}.footer a:hover{color:var(--blue)}
+@media(max-width:900px){.section-grid{gap:26px;grid-template-columns:1fr 1fr}.visual{padding:23px 16px}.closing{padding:32px}.cycle li:not(:last-child)::after{margin:0 7px}}
+@media(max-width:700px){.wrap{width:calc(100% - 36px)}.nav{font-size:12px;gap:12px}.nav-links{gap:15px}.hero{padding:51px 0 43px}.hero h1{letter-spacing:-1px}.hero p{font-size:16px}.section{padding:37px 0 42px}.section-heading{gap:13px;margin-bottom:23px}.section h2{font-size:23px}.section-heading p{font-size:16px}.section-grid{grid-template-columns:1fr;gap:27px}.visual{max-width:520px;width:100%;justify-self:center}.copy p{font-size:16px}.two-times{grid-template-columns:1fr;gap:20px}.closing{padding:27px 22px}.closing h2{font-size:23px}.two-times h3{font-size:19px}.cycle{gap:9px}.cycle li{font-size:13px}.cycle span{padding:8px}.cycle li:not(:last-child)::after{margin:0 0 0 9px}.footer{flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media(max-width:700px){.nav{flex-wrap:wrap}.nav-links{flex-wrap:wrap;gap:12px 20px;line-height:1.7}}
+
+/* Photographic hero; keep the title editable and lightly translucent. */
+.hero{position:relative;isolation:isolate;overflow:hidden;border-radius:26px;margin:24px 0 32px;padding:83px 28px;min-height:410px;display:flex;flex-direction:column;justify-content:center;background:#17304b url('./assets/balcony-solar-hero.png') center center/cover no-repeat}
+.hero::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(8,22,39,.36),rgba(8,22,39,.5) 48%,rgba(8,22,39,.24))}
+.hero h1{color:rgba(255,255,255,.9);text-shadow:0 2px 25px rgba(0,12,30,.2)}
+.hero h1 span{color:rgba(205,230,255,.92)}
+.hero .eyebrow{color:rgba(255,255,255,.78)}
+.hero p{color:rgba(255,255,255,.86);text-shadow:0 1px 10px rgba(0,0,0,.35)}
+@media(max-width:700px){.hero{margin:18px 0 26px;min-height:410px;padding:56px 19px;border-radius:20px;background-position:63% center}.hero::before{background:rgba(8,22,39,.52)}.hero p{font-size:14px;line-height:1.9}}
+
+.cycle-scroll{overflow-x:auto;margin:27px 0}
+.cycle-loop{position:relative;min-width:620px;padding-bottom:37px}
+.cycle{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:30px;margin:0}
+.cycle li{position:relative;display:block;text-align:center;font-size:14px}
+.cycle span{display:block;padding:10px 8px;white-space:nowrap}
+.cycle li:not(:last-child)::after{position:absolute;right:-23px;top:50%;transform:translateY(-50%);margin:0}
+.cycle-return{position:absolute;left:calc((100% - 120px)/10);right:calc((100% - 120px)/10);height:31px;bottom:6px;border:1.5px solid #7d9fbe;border-top:0;border-radius:0 0 12px 12px}
+.cycle-return::before{content:'';position:absolute;left:-4px;top:0;width:6px;height:6px;border-left:1.5px solid #7d9fbe;border-top:1.5px solid #7d9fbe;transform:rotate(45deg)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="nav"><a class="brand" href="./index.html">家庭能源智能调度</a><nav class="nav-links" aria-label="概念演示导航"><a href="./energy-market-demo.html">演示1：实时交易 →</a><a href="./soc-value-quote-demo.html">演示2：SOC价值与报价 →</a></nav></header>
+<main>
+<section class="hero" aria-labelledby="hero-title">
+<div class="eyebrow">方案介绍 · 概念演示</div>
+<h1 id="hero-title">协调此刻的能量<br><span>理解未来的价值</span></h1>
+<p>多 Agent 实时交易 × 储能 SOC 边际价值报价<br>连接“这一刻电力怎么流”与“如何跨越时间提高电力价值”。</p>
+</section>
+<section class="section" id="market" aria-labelledby="market-title">
+<header class="section-heading"><span class="number">01 /</span><div><h2 id="market-title">多 Agent 实时交易</h2><p>决定“这一瞬间，电力应该怎么流”</p></div></header>
+<div class="section-grid">
+<div class="copy">
+<p>家庭能源系统中存在多种可能的能量流向，光伏直供负荷、光伏为储能充电、储能向负荷供电、储能向电网馈电、以及电网为储能充电等。调度不仅要决定<strong>“往哪里流”</strong>，还要决定<strong>“流多少”</strong>。传统状态机或规则式调度通常需要预先定义能量流模式及切换条件，面对不同结构的家庭系统容易变得复杂、僵硬。</p>
+<p>我们不预设运行模式，而是将负载、光伏、储能和电网抽象为独立 Agent，让它们在交易市场上自主协调当前时刻的能量流向和功率大小。各 Agent 根据自身状态进行报量报价，形成买单和卖单；交易系统以分钟级的高频周期撮合买卖单，最终根据各 Agent 的成交量确定本周期的供电与用电功率。</p>
+<p>这种机制具有天然的实时响应能力：当负荷、光伏出力或电价发生跳变时，下一轮报价与撮合会立即重新分配能量流向和流量，“涌现”出适合当前状态的改变。</p>
+<a class="button" href="./energy-market-demo.html">进入演示1 · 看报价如何变成能量流 <span aria-hidden="true">→</span></a>
+</div>
+<figure class="visual">
+<div class="visual-label">分钟级协调 / 当前状态 → 报价 → 成交</div>
+<svg viewBox="0 0 460 360" role="img" aria-labelledby="market-svg-title"><title id="market-svg-title">光伏、负载、储能和电网向同一个交易市场提交订单，成交结果转为设备功率</title>
+<defs><marker id="market-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10" fill="#8ca6bf"/></marker></defs>
+<g fill="none" stroke="#b9c8d8" stroke-width="1.5" marker-end="url(#market-arrow)"><path d="M100 84L185 148"/><path d="M360 84L275 148"/><path d="M100 263L185 202"/><path d="M360 263L275 202"/></g>
+<g fill="#fff" stroke="#e0e5eb"><rect x="18" y="15" width="164" height="72" rx="15"/><rect x="278" y="15" width="164" height="72" rx="15"/><rect x="18" y="260" width="164" height="72" rx="15"/><rect x="278" y="260" width="164" height="72" rx="15"/></g>
+<g text-anchor="middle" fill="#1d1d1f" font-size="17" font-weight="500"><text x="100" y="44">光伏 Agent</text><text x="360" y="44">负载 Agent</text><text x="100" y="289">储能 Agent</text><text x="360" y="289">电网 Agent</text></g>
+<g text-anchor="middle" fill="#6e6e73" font-size="13"><text x="100" y="67">出力 → 卖单</text><text x="360" y="67">需求 → 买单</text><text x="100" y="312">SOC 价值 → 买 / 卖单</text><text x="360" y="312">电价 → 买 / 卖单</text></g>
+<rect x="147" y="121" width="166" height="108" rx="20" fill="#e9f2fc" stroke="#c5d9ef"/><text x="230" y="153" text-anchor="middle" fill="#0071e3" font-size="18" font-weight="500">交易市场</text><text x="230" y="180" text-anchor="middle" fill="#55748f" font-size="14">价格 × 数量</text><text x="230" y="204" text-anchor="middle" fill="#55748f" font-size="14">买卖订单撮合</text>
+</svg>
+<figcaption>各设备提交报价与报量。<br>成交净量 → 本周期供电与用电功率。</figcaption>
+</figure>
+</div>
+</section>
+<section class="section" id="value" aria-labelledby="value-title">
+<header class="section-heading"><span class="number">02 /</span><div><h2 id="value-title">储能 SOC 的边际价值报价</h2><p>决定“电力应该如何跨越时间提高价值”</p></div></header>
+<div class="section-grid">
+<div class="copy">
+<p>储能具有跨时间搬运电力的能力。为了让储能 Agent 理解如何在不同时间之间调配电力，我们为其建立 <strong>SOC 边际价值</strong>。</p>
+<p>在其他条件相同的情况下，SOC 越高，继续充电的边际价值越低、放电意愿越强；SOC 越低，剩余电量越珍贵，继续放电的意愿越弱、充电意愿越强。我们结合未来电价、光伏与负荷的概率分布或场景分布，使用动态规划方法将这种直觉转化为可计算的数值，并进一步考虑充放电效率和电池折旧等物理约束，将这些信息翻译为<strong>“电池 Agent 在当前时间点愿意以什么价格充入一单位电、又愿意以什么价格释放一单位电”</strong>。</p>
+<p>配合动态电价的 15 分钟变化周期，重新计算最新的边际价值曲线，并考虑充放电功率形成订单。最终，拍卖机制将订单与光伏、负载和电网的订单放入同一个市场中撮合，从而形成能追求未来机会价值的当前充放电指令。</p>
+<a class="button" href="./soc-value-quote-demo.html">进入演示2 · 看未来如何决定当前报价 <span aria-hidden="true">→</span></a>
+</div>
+<figure class="visual">
+<div class="visual-label">跨时间评估 / 未来信息 → 当前价值</div>
+<svg viewBox="0 0 460 350" role="img" aria-labelledby="value-svg-title"><title id="value-svg-title">未来电价、光伏、负荷经动态规划得到SOC边际价值，再结合效率与折旧形成当前买卖报价</title>
+<defs><marker id="value-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10" fill="#8ca6bf"/></marker></defs>
+<g fill="#fff" stroke="#e0e5eb"><rect x="12" y="12" width="136" height="51" rx="12"/><rect x="162" y="12" width="136" height="51" rx="12"/><rect x="312" y="12" width="136" height="51" rx="12"/></g>
+<g fill="#626269" font-size="14" text-anchor="middle"><text x="80" y="44">未来电价</text><text x="230" y="44">光伏分布</text><text x="380" y="44">需求分布</text></g>
+<path d="M80 64V85H380V64M230 85V111" stroke="#b9c8d8" stroke-width="1.5" fill="none" marker-end="url(#value-arrow)"/>
+<rect x="75" y="119" width="310" height="87" rx="18" fill="#e9f2fc" stroke="#c5d9ef"/><text x="230" y="152" text-anchor="middle" fill="#0071e3" font-size="18" font-weight="500">动态规划 · 从未来倒推</text><text x="230" y="180" text-anchor="middle" fill="#55748f" font-size="14">不同 SOC 下，一单位电的边际价值</text>
+<path d="M230 207V248" fill="none" stroke="#b9c8d8" stroke-width="1.5" marker-end="url(#value-arrow)"/><text x="244" y="234" fill="#6e6e73" font-size="12">结合效率与折旧</text>
+<g fill="#fff" stroke="#e0e5eb"><rect x="12" y="261" width="211" height="76" rx="15"/><rect x="237" y="261" width="211" height="76" rx="15"/></g>
+<g text-anchor="middle"><text x="117" y="291" fill="#1d1d1f" font-size="16" font-weight="500">充电买价上限</text><text x="343" y="291" fill="#1d1d1f" font-size="16" font-weight="500">放电卖价下限</text><text x="117" y="316" fill="#6e6e73" font-size="13">愿付多少，换取未来收益</text><text x="343" y="316" fill="#6e6e73" font-size="13">至少收多少，放弃未来收益</text></g>
+</svg>
+<figcaption>未来的机会价值，成为当前的报价依据。<br>报价进入同一个实时市场，决定是否充放电。</figcaption>
+</figure>
+</div>
+</section>
+<section class="closing" id="loop" aria-labelledby="loop-title">
+<div class="eyebrow">两套机制 · 一个闭环</div><h2 id="loop-title">让当前行动，带着对未来的判断。</h2>
+<div class="two-times"><div><span>SOC 边际价值模型 · 利用未来信息</span><h3>“这一单位电未来值多少钱？”</h3></div><div><span>实时拍卖机制 · 利用当前负载、光伏、电价</span><h3>“这一刻电应该往哪里流、流多少？”</h3></div></div>
+<p>两套机制分别解决不同时间尺度的问题。因此，系统无需预先写死“光伏优先充电”“高价时必须放电”等固定运行模式，而是持续经历：</p>
+<div class="cycle-scroll"><div class="cycle-loop"><ol class="cycle" aria-label="智能管理闭环：状态感知、未来价值评估、Agent报价、市场撮合、执行，再回到状态感知"><li><span>状态感知</span></li><li><span>未来价值评估</span></li><li><span>Agent 报价</span></li><li><span>市场撮合</span></li><li><span>执行</span></li></ol><div class="cycle-return" aria-hidden="true"></div></div></div>
+<p>形成一个能够随不同家庭特征和外部环境持续自适应调整的智能管理闭环。</p>
+</section>
+</main>
+<footer class="footer"><span>家庭能源智能调度 · 概念方案</span><a href="#hero-title">回到顶部 ↑</a></footer>
+</div>
+</body>
+</html>
